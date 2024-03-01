@@ -30,7 +30,7 @@
                 <!-- First Name input field -->
                 <div class="col-md-4 mb-3">
                     <label for="First_name" class="fw-bold">First Name</label>
-                    <input type="text" id="First_name" name="First_name" class="form-control" placeholder="First Name">
+                    <input type="text" id="First_name" name="First_name" class="form-control" pattern="^[^0-9]+$" placeholder="First Name">
                 </div>
                 <!-- Middle Name input field -->
                 <div class="col-md-4 mb-3">
@@ -80,31 +80,5 @@
             <div> Already have an account? <a href="loginform.php">Login! </div>
         </form>
     </div>
-    
-    <!-- JavaScript function to validate email format -->
-    <script>
-    // JavaScript function to validate email format
-    function validateForm() {
-        // Retrieve the email input value
-        var email = document.getElementById('email').value;
-        // Get the element to display error messages related to email
-        var emailError = document.getElementById('emailError');
-
-        // Regular expression to check email format
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        // Check if email matches the regular expression
-        if (!emailRegex.test(email)) {
-            // Display error message if email format is invalid
-            emailError.innerHTML = "Invalid email format: should contain @, gmail, .com";
-            return false;
-        } else {
-            // Clear error message if email format is valid
-            emailError.innerHTML = "";
-            return true;
-        }
-    }
-</script>
-
 </body>
 </html>
